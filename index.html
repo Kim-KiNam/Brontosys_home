@@ -495,6 +495,7 @@
       <div class="nav-item" id="nav-company">Company
         <div class="dropdown">
           <a onclick="goPage('greeting')">회사소개 <span class="d-arr">›</span></a>
+          <a onclick="goPage('clients')">주요 고객사 <span class="d-arr">›</span></a>
           <a onclick="goPage('orgchart')">조직도 <span class="d-arr">›</span></a>
           <a onclick="goPage('location')">오시는 길 <span class="d-arr">›</span></a>
         </div>
@@ -527,7 +528,7 @@
   <div class="mobile-nav-group">
     <div class="mobile-nav-label" onclick="toggleMobileSub('sub-company',this)">Company <span class="arrow">›</span></div>
     <div class="mobile-sub" id="sub-company">
-      <a onclick="goPage('greeting')">회사소개</a><a onclick="goPage('orgchart')">조직도</a><a onclick="goPage('location')">오시는 길</a>
+      <a onclick="goPage('greeting')">회사소개</a><a onclick="goPage('clients')">주요 고객사</a><a onclick="goPage('orgchart')">조직도</a><a onclick="goPage('location')">오시는 길</a>
     </div>
   </div>
   <div class="mobile-nav-group">
@@ -1154,7 +1155,7 @@
         <div class="footer-brand-addr">서울특별시 강서구 공항대로 247 퀸즈파크나인 704호 (마곡동)</div>
         <div class="footer-brand-tel">T. 02-6080-0609</div>
       </div>
-      <div class="footer-col"><h4>Company</h4><a onclick="goPage('greeting')">회사소개</a><a onclick="goPage('orgchart')">조직도</a><a onclick="goPage('location')">오시는 길</a></div>
+      <div class="footer-col"><h4>Company</h4><a onclick="goPage('greeting')">회사소개</a><a onclick="goPage('clients')">주요 고객사</a><a onclick="goPage('orgchart')">조직도</a><a onclick="goPage('location')">오시는 길</a></div>
       <div class="footer-col"><h4>Solution</h4><a onclick="goPage('falcon')">FalconStor</a><a onclick="goPage('Veeam')">Veeam</a><a onclick="goPage('virtualization')">Virtualization Platform</a><a onclick="goPage('rpa')">RPA Automation</a></div>
       <div class="footer-col"><h4>Service / Contact</h4><a onclick="goPage('sysimpl')">System Implementation</a><a onclick="goPage('notice')">공지사항</a><a onclick="goPage('inquiry')">문의하기</a></div>
     </div>
@@ -1366,6 +1367,96 @@
     </div>
   </div>
 
+</div>
+
+<!-- COMPANY: 주요 고객사 -->
+<div id="clients" class="page">
+  <style>
+    #clients .greeting-header{border-bottom:none;}
+    .clients-section{background:#fff;padding:85px 0 140px;}
+    .clients-row{overflow:hidden;margin-bottom:24px;padding:8px 0;}
+    .clients-row:last-child{margin-bottom:0;}
+    .clients-track{display:flex;gap:20px;width:max-content;}
+    .clients-track--right{animation:cl-right 35s linear infinite;}
+    .clients-track--left{animation:cl-left 35s linear infinite;}
+    .clients-row:hover .clients-track{animation-play-state:paused;}
+    .clients-card{flex:0 0 auto;width:190px;height:84px;border:1px solid #e4e8ee;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;padding:12px 20px;box-sizing:border-box;transition:border-color .25s,box-shadow .25s,transform .25s;cursor:pointer;}
+    .clients-card:hover{border-color:#e8500a;box-shadow:0 0 0 1px #e8500a,0 8px 24px rgba(232,80,10,.15);transform:translateY(-3px);}
+    .clients-card img{max-width:130px;max-height:52px;object-fit:contain;filter:grayscale(100%);opacity:.65;transition:filter .25s,opacity .25s;}
+    .clients-card:hover img{filter:grayscale(0%);opacity:1;}
+    @keyframes cl-right{from{transform:translateX(-50%);}to{transform:translateX(0%);}}
+    @keyframes cl-left{from{transform:translateX(0%);}to{transform:translateX(-50%);}}
+  </style>
+  <div class="greeting-header">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="margin-bottom:14px;"><span class="page-breadcrumb">Company › <span>주요 고객사</span></span></div>
+      <h2 class="reveal">주요 고객사</h2>
+      <div class="greeting-header-sub reveal reveal-delay-1">브론토시스와 함께하는 주요 고객사를 소개합니다.</div>
+      <div class="greeting-header-line reveal reveal-delay-2"></div>
+    </div>
+  </div>
+  <div class="clients-section">
+    <!-- Row 1: 오른쪽으로 (12개 × 2벌) -->
+    <div class="clients-row">
+      <div class="clients-track clients-track--right">
+        <div class="clients-card"><img src="image/고객사/KCL.jpg" alt="KCL"/></div>
+        <div class="clients-card"><img src="image/고객사/SKC.jpg" alt="SKC"/></div>
+        <div class="clients-card"><img src="image/고객사/sfa.PNG" alt="SFA"/></div>
+        <div class="clients-card"><img src="image/고객사/교보증권.png" alt="교보증권"/></div>
+        <div class="clients-card"><img src="image/고객사/군인공제회.PNG" alt="군인공제회"/></div>
+        <div class="clients-card"><img src="image/고객사/군인공제회C&amp;C.jpg" alt="군인공제회C&amp;C"/></div>
+        <div class="clients-card"><img src="image/고객사/던킨.png" alt="던킨"/></div>
+        <div class="clients-card"><img src="image/고객사/배스킨라빈스.png" alt="배스킨라빈스"/></div>
+        <div class="clients-card"><img src="image/고객사/병무청.jpg" alt="병무청"/></div>
+        <div class="clients-card"><img src="image/고객사/삼립.png" alt="삼립"/></div>
+        <div class="clients-card"><img src="image/고객사/상미당홀딩스.png" alt="상미당홀딩스"/></div>
+        <div class="clients-card"><img src="image/고객사/서울특별시.png" alt="서울특별시"/></div>
+        <!-- 복제본 -->
+        <div class="clients-card"><img src="image/고객사/KCL.jpg" alt="KCL"/></div>
+        <div class="clients-card"><img src="image/고객사/SKC.jpg" alt="SKC"/></div>
+        <div class="clients-card"><img src="image/고객사/sfa.PNG" alt="SFA"/></div>
+        <div class="clients-card"><img src="image/고객사/교보증권.png" alt="교보증권"/></div>
+        <div class="clients-card"><img src="image/고객사/군인공제회.PNG" alt="군인공제회"/></div>
+        <div class="clients-card"><img src="image/고객사/군인공제회C&amp;C.jpg" alt="군인공제회C&amp;C"/></div>
+        <div class="clients-card"><img src="image/고객사/던킨.png" alt="던킨"/></div>
+        <div class="clients-card"><img src="image/고객사/배스킨라빈스.png" alt="배스킨라빈스"/></div>
+        <div class="clients-card"><img src="image/고객사/병무청.jpg" alt="병무청"/></div>
+        <div class="clients-card"><img src="image/고객사/삼립.png" alt="삼립"/></div>
+        <div class="clients-card"><img src="image/고객사/상미당홀딩스.png" alt="상미당홀딩스"/></div>
+        <div class="clients-card"><img src="image/고객사/서울특별시.png" alt="서울특별시"/></div>
+      </div>
+    </div>
+    <!-- Row 2: 왼쪽으로 (12개 × 2벌) -->
+    <div class="clients-row">
+      <div class="clients-track clients-track--left">
+        <div class="clients-card"><img src="image/고객사/승일.jpg" alt="승일"/></div>
+        <div class="clients-card"><img src="image/고객사/연성대학교.jpg" alt="연성대학교"/></div>
+        <div class="clients-card"><img src="image/고객사/오뚜기.png" alt="오뚜기"/></div>
+        <div class="clients-card"><img src="image/고객사/이니텍.png" alt="이니텍"/></div>
+        <div class="clients-card"><img src="image/고객사/인디에프.png" alt="인디에프"/></div>
+        <div class="clients-card"><img src="image/고객사/지방공기업평가원.png" alt="지방공기업평가원"/></div>
+        <div class="clients-card"><img src="image/고객사/파리크라상.png" alt="파리크라상"/></div>
+        <div class="clients-card"><img src="image/고객사/한국가스공사.jpg" alt="한국가스공사"/></div>
+        <div class="clients-card"><img src="image/고객사/한국자산신탁.jpg" alt="한국자산신탁"/></div>
+        <div class="clients-card"><img src="image/고객사/한국장학재단.gif" alt="한국장학재단"/></div>
+        <div class="clients-card"><img src="image/고객사/한국전력거래소.jpg" alt="한국전력거래소"/></div>
+        <div class="clients-card"><img src="image/고객사/행정공제회.png" alt="행정공제회"/></div>
+        <!-- 복제본 -->
+        <div class="clients-card"><img src="image/고객사/승일.jpg" alt="승일"/></div>
+        <div class="clients-card"><img src="image/고객사/연성대학교.jpg" alt="연성대학교"/></div>
+        <div class="clients-card"><img src="image/고객사/오뚜기.png" alt="오뚜기"/></div>
+        <div class="clients-card"><img src="image/고객사/이니텍.png" alt="이니텍"/></div>
+        <div class="clients-card"><img src="image/고객사/인디에프.png" alt="인디에프"/></div>
+        <div class="clients-card"><img src="image/고객사/지방공기업평가원.png" alt="지방공기업평가원"/></div>
+        <div class="clients-card"><img src="image/고객사/파리크라상.png" alt="파리크라상"/></div>
+        <div class="clients-card"><img src="image/고객사/한국가스공사.jpg" alt="한국가스공사"/></div>
+        <div class="clients-card"><img src="image/고객사/한국자산신탁.jpg" alt="한국자산신탁"/></div>
+        <div class="clients-card"><img src="image/고객사/한국장학재단.gif" alt="한국장학재단"/></div>
+        <div class="clients-card"><img src="image/고객사/한국전력거래소.jpg" alt="한국전력거래소"/></div>
+        <div class="clients-card"><img src="image/고객사/행정공제회.png" alt="행정공제회"/></div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- COMPANY: 조직도 -->
@@ -2370,8 +2461,8 @@
 </div>
 
 <script>
-  const pages = ['home','greeting','orgchart','location','rpa','falcon','Veeam','virtualization','sysimpl','notice','inquiry'];
-  const navMap = { greeting:'company', orgchart:'company', location:'company', rpa:'solution', falcon:'solution', Veeam:'solution', virtualization:'solution', sysimpl:'service', notice:'contact', inquiry:'contact' };
+  const pages = ['home','greeting','clients','orgchart','location','rpa','falcon','Veeam','virtualization','sysimpl','notice','inquiry'];
+  const navMap = { greeting:'company', clients:'company', orgchart:'company', location:'company', rpa:'solution', falcon:'solution', Veeam:'solution', virtualization:'solution', sysimpl:'service', notice:'contact', inquiry:'contact' };
 
   function toggleMobileMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
