@@ -282,7 +282,7 @@
     .cbtn-white:hover { border-color: rgba(255,255,255,0.7); }
 
     /* ======== FOOTER ======== */
-    .footer { background: #1a1c20; color: #8b9aaa; padding: 64px 24px 44px; }
+    .footer { background: #1a1c20; color: #8b9aaa; padding: 40px 24px 35px; }
     .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 36px; }
     .footer-logo-img { height: 40px; width: auto; object-fit: contain; margin-bottom: 16px; filter: brightness(2.2) contrast(1.0); }
     .footer-brand-name { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.82); margin-bottom: 4px; }
@@ -2189,18 +2189,297 @@
 <!-- SOLUTION: Virtualization -->
 <div id="virtualization" class="page">
   <div class="greeting-header">
-  <div style="max-width:1100px;margin:0 auto;">
-    <div style="margin-bottom:14px;"><span class="page-breadcrumb">Solution › <span>Virtualization Platform</span></span></div>
-    <h2>Virtualization Platform</h2>
-    <div class="greeting-header-sub">가상화와 맞춤형 플랫폼으로 유연한 IT 인프라를 구축합니다.</div>
-    <div class="greeting-header-line"></div>
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="margin-bottom:14px;"><span class="page-breadcrumb">Solution › <span>Virtualization Platform</span></span></div>
+      <h2 class="reveal">Proxmox VE Architecture</h2>
+      <div class="greeting-header-sub reveal reveal-delay-1">Proxmox VE는 가상화, 컨테이너, 스토리지, 네트워크, 백업, 고가용성을 하나의 플랫폼에서 통합 관리합니다.</div>
+      <div class="greeting-header-line reveal reveal-delay-2"></div>
+    </div>
+  </div>
+  <div style="background:#fff;padding:64px 40px 80px;">
+    <div style="max-width:1240px;margin:0 auto;text-align:center;">
+      <h3 class="reveal reveal-delay-1" style="font-size:28px;font-weight:900;color:#0d2140;margin:0;letter-spacing:-0.5px;">Proxmox VE</h3>
+      <img class="reveal reveal-delay-2" src="image/Proxmox_diagram.png" alt="Proxmox VE 아키텍처 다이어그램" style="width:100%;max-width:1240px;display:block;margin:0 auto;"/>
+    </div>
+  </div>
+
+  <style>
+    .pv-num{font-size:13px;font-weight:800;color:#e8500a;letter-spacing:2px;margin-bottom:6px;}
+    .pv-stitle{font-size:26px;font-weight:900;color:#0d2140;margin-bottom:40px;}
+    /* 핵심 기능 */
+    .pv-func{background:#f7f8fa;padding:80px 40px;}
+    .pv-func-inner{max-width:1240px;margin:0 auto;}
+    .pv-func-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;}
+    .pv-func-card{background:#fff;border-radius:10px;padding:28px 18px;border:1px solid #eef0f4;}
+    .pv-func-card-num{font-size:12px;font-weight:800;color:#e8500a;letter-spacing:1px;margin-bottom:12px;}
+    .pv-func-card-icon{margin-bottom:14px;}
+    .pv-func-card-icon svg{width:38px;height:38px;stroke:#e8500a;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+    .pv-func-card-title{font-size:14px;font-weight:800;color:#0d2140;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid #eee;}
+    .pv-func-card-list{list-style:none;padding:0;margin:0;}
+    .pv-func-card-list li{font-size:12.5px;color:#3d4f6a;line-height:1.9;padding-left:10px;position:relative;}
+    .pv-func-card-list li::before{content:'·';position:absolute;left:0;color:#e8500a;font-weight:900;}
+    @media(max-width:1100px){.pv-func-grid{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:600px){.pv-func-grid{grid-template-columns:repeat(2,1fr);}}
+    /* 도입 효과 */
+    .pv-effect{background:#0d1117;padding:80px 40px;}
+    .pv-effect-inner{max-width:1240px;margin:0 auto;}
+    .pv-effect-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;}
+    .pv-effect-card{background:#1a2030;border-radius:12px;padding:36px 24px;}
+    .pv-effect-card-icon{width:52px;height:52px;border-radius:50%;background:rgba(232,80,10,.15);display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+    .pv-effect-card-icon svg{width:24px;height:24px;stroke:#e8500a;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+    .pv-effect-card-title{font-size:16px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .pv-effect-card-desc{font-size:13px;color:#8b9aaa;line-height:1.9;}
+    @media(max-width:1000px){.pv-effect-grid{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:600px){.pv-effect-grid{grid-template-columns:1fr;}}
+    /* 활용 분야 */
+    .pv-use{background:#fff;padding:80px 40px;}
+    .pv-use-inner{max-width:1240px;margin:0 auto;}
+    .pv-use-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .pv-use-card{border:1px solid #e4e8ee;border-radius:10px;padding:32px 28px;display:flex;gap:20px;align-items:flex-start;}
+    .pv-use-icon{flex:0 0 auto;width:48px;height:48px;border-radius:50%;border:2px solid #e8500a;display:flex;align-items:center;justify-content:center;}
+    .pv-use-icon svg{width:22px;height:22px;stroke:#e8500a;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+    .pv-use-text-title{font-size:15px;font-weight:800;color:#0d2140;margin-bottom:8px;}
+    .pv-use-text-desc{font-size:13px;color:#3d4f6a;line-height:1.8;}
+    @media(max-width:900px){.pv-use-grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:600px){.pv-use-grid{grid-template-columns:1fr;}}
+    /* 구축 서비스 */
+    .pv-steps-section{background:#f7f8fa;padding:80px 40px;}
+    .pv-steps-inner{max-width:1240px;margin:0 auto;}
+    .pv-steps-row{display:flex;align-items:flex-start;}
+    .pv-step{flex:1;padding:0 16px;}
+    .pv-step-arrow{flex:0 0 auto;color:#e8500a;font-size:22px;padding-top:36px;line-height:1;}
+    .pv-step-icon{width:48px;height:48px;border-radius:50%;background:#fff;border:2px solid #e8500a;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+    .pv-step-icon svg{width:22px;height:22px;stroke:#e8500a;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+    .pv-step-num{font-size:11px;font-weight:800;color:#e8500a;letter-spacing:1.5px;margin-bottom:6px;}
+    .pv-step-title{font-size:15px;font-weight:800;color:#0d2140;margin-bottom:12px;}
+    .pv-step-list{list-style:none;padding:0;margin:0;}
+    .pv-step-list li{font-size:12.5px;color:#3d4f6a;line-height:1.9;padding-left:10px;position:relative;}
+    .pv-step-list li::before{content:'·';position:absolute;left:0;color:#e8500a;font-weight:900;}
+    @media(max-width:900px){.pv-steps-row{flex-direction:column;gap:24px;}.pv-step-arrow{display:none;}.pv-step{padding:0;}}
+    /* CTA */
+    .pv-cta{background:#111827;padding:72px 40px;}
+    .pv-cta-inner{max-width:900px;margin:0 auto;text-align:center;}
+    .pv-cta-title{font-size:26px;font-weight:900;color:#fff;margin-bottom:16px;letter-spacing:-0.5px;}
+    .pv-cta-sub{font-size:15px;color:#8b9aaa;line-height:1.9;margin-bottom:40px;}
+    .pv-cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+    .pv-cta-btn-primary{background:#e8500a;color:#fff;border:none;border-radius:6px;padding:14px 32px;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px;}
+    .pv-cta-btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.3);border-radius:6px;padding:14px 32px;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px;}
+    .pv-cta-btn-primary:hover{opacity:.85;}
+    .pv-cta-btn-outline:hover{border-color:rgba(255,255,255,.6);}
+    .pv-cta-btn-icon svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+  </style>
+
+  <!-- 02. 핵심 기능 -->
+  <div class="pv-func">
+    <div class="pv-func-inner">
+      <div class="pv-num reveal">02</div>
+      <div class="pv-stitle reveal">Proxmox VE 핵심 기능</div>
+      <div class="pv-func-grid">
+        <div class="pv-func-card reveal">
+          <div class="pv-func-card-num">01.</div>
+          <div class="pv-func-card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="5" rx="1"/><rect x="2" y="10" width="20" height="5" rx="1"/><rect x="2" y="17" width="20" height="5" rx="1"/></svg></div>
+          <div class="pv-func-card-title">가상화</div>
+          <ul class="pv-func-card-list">
+            <li>KVM 기반 가상화</li>
+            <li>Windows / Linux VM 지원</li>
+            <li>GPU / PCI Passthrough</li>
+            <li>라이브 마이그레이션</li>
+          </ul>
+        </div>
+        <div class="pv-func-card reveal">
+          <div class="pv-func-card-num">02.</div>
+          <div class="pv-func-card-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+          <div class="pv-func-card-title">컨테이너</div>
+          <ul class="pv-func-card-list">
+            <li>LXC 컨테이너 지원</li>
+            <li>경량화된 컨테이너 환경</li>
+            <li>고성능 관리 기술</li>
+            <li>템플릿 및 백업 지원</li>
+          </ul>
+        </div>
+        <div class="pv-func-card reveal">
+          <div class="pv-func-card-num">03.</div>
+          <div class="pv-func-card-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+          <div class="pv-func-card-title">스토리지</div>
+          <ul class="pv-func-card-list">
+            <li>Ceph / ZFS 지원</li>
+            <li>NAS / SAN 연동</li>
+            <li>Thin Provisioning</li>
+            <li>스토리지 중복 및 스냅샷</li>
+          </ul>
+        </div>
+        <div class="pv-func-card reveal">
+          <div class="pv-func-card-num">04.</div>
+          <div class="pv-func-card-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <div class="pv-func-card-title">고가용성</div>
+          <ul class="pv-func-card-list">
+            <li>클러스터링 지원</li>
+            <li>HA 자동 장애 복구</li>
+            <li>무중단 서비스 운영</li>
+            <li>라이브 마이그레이션</li>
+          </ul>
+        </div>
+        <div class="pv-func-card reveal">
+          <div class="pv-func-card-num">05.</div>
+          <div class="pv-func-card-icon"><svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div>
+          <div class="pv-func-card-title">백업 및 복구</div>
+          <ul class="pv-func-card-list">
+            <li>VM / CT 백업</li>
+            <li>스냅샷 및 복제</li>
+            <li>증분 백업 지원</li>
+            <li>빠른 복구 환경 제공</li>
+          </ul>
+        </div>
+        <div class="pv-func-card reveal">
+          <div class="pv-func-card-num">06.</div>
+          <div class="pv-func-card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+          <div class="pv-func-card-title">통합 관리</div>
+          <ul class="pv-func-card-list">
+            <li>웹 기반 통합 관리 UI</li>
+            <li>모니터링 및 알림</li>
+            <li>권한 및 역할 관리</li>
+            <li>REST API 지원</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03. 도입 효과 -->
+  <div class="pv-effect">
+    <div class="pv-effect-inner">
+      <div class="pv-num reveal">03</div>
+      <div class="pv-stitle reveal" style="color:#fff;">Proxmox VE 도입 효과</div>
+      <div class="pv-effect-grid">
+        <div class="pv-effect-card reveal">
+          <div class="pv-effect-card-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div class="pv-effect-card-title">비용 절감</div>
+          <div class="pv-effect-card-desc">오픈소스 기반으로 라이선스 비용 절감 및 TCO 최소화</div>
+        </div>
+        <div class="pv-effect-card reveal">
+          <div class="pv-effect-card-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+          <div class="pv-effect-card-title">운영 효율성 향상</div>
+          <div class="pv-effect-card-desc">통합 관리 및 자동화를 통해 운영 효율성과 생산성 극대화</div>
+        </div>
+        <div class="pv-effect-card reveal">
+          <div class="pv-effect-card-icon"><svg viewBox="0 0 24 24"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div>
+          <div class="pv-effect-card-title">확장성 및 유연성</div>
+          <div class="pv-effect-card-desc">가상화, 컨테이너, 스토리지 등 유연한 확장 및 환경 구성 가능</div>
+        </div>
+        <div class="pv-effect-card reveal">
+          <div class="pv-effect-card-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="pv-effect-card-title">안정성 및 보안 강화</div>
+          <div class="pv-effect-card-desc">클러스터 및 백업 기능으로 안정적인 서비스 운영 및 데이터 보호</div>
+        </div>
+        <div class="pv-effect-card reveal">
+          <div class="pv-effect-card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg></div>
+          <div class="pv-effect-card-title">벤더 종속성 제거</div>
+          <div class="pv-effect-card-desc">오픈소스 기반으로 벤더 종속성 없이 자유로운 인프라 운영</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04. 활용 분야 -->
+  <div class="pv-use">
+    <div class="pv-use-inner">
+      <div class="pv-num reveal">04</div>
+      <div class="pv-stitle reveal">Proxmox VE 활용 분야</div>
+      <div class="pv-use-grid">
+        <div class="pv-use-card reveal">
+          <div class="pv-use-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+          <div><div class="pv-use-text-title">기업 서버 가상화</div><div class="pv-use-text-desc">업무 시스템 통합 가상화 서버 자원 효율 극대화</div></div>
+        </div>
+        <div class="pv-use-card reveal">
+          <div class="pv-use-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <div><div class="pv-use-text-title">VDI / 원격 데스크톱</div><div class="pv-use-text-desc">VDI 인프라 구축 및 관리 원격 근무 환경 지원</div></div>
+        </div>
+        <div class="pv-use-card reveal">
+          <div class="pv-use-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <div><div class="pv-use-text-title">개발 / 테스트 환경</div><div class="pv-use-text-desc">개발 및 테스트 환경 구성 빠른 배포 및 자원 활용</div></div>
+        </div>
+        <div class="pv-use-card reveal">
+          <div class="pv-use-icon"><svg viewBox="0 0 24 24"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg></div>
+          <div><div class="pv-use-text-title">백업 / DR 환경</div><div class="pv-use-text-desc">백업 서버 및 DR 환경 구축 재해 복구 및 데이터 보호</div></div>
+        </div>
+        <div class="pv-use-card reveal">
+          <div class="pv-use-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <div><div class="pv-use-text-title">교육 / 연구 기관</div><div class="pv-use-text-desc">실습 및 연구 환경 구축 유연한 자원 제공</div></div>
+        </div>
+        <div class="pv-use-card reveal">
+          <div class="pv-use-icon"><svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+          <div><div class="pv-use-text-title">MSP / 클라우드 서비스</div><div class="pv-use-text-desc">클라우드 인프라 서비스 제공 멀티 테넌트 환경 구축</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05. 구축 서비스 -->
+  <div class="pv-steps-section">
+    <div class="pv-steps-inner">
+      <div class="pv-num reveal">05</div>
+      <div class="pv-stitle reveal">브론토시스 Proxmox 구축 서비스</div>
+      <div class="pv-steps-row">
+        <div class="pv-step reveal">
+          <div class="pv-step-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <div class="pv-step-num">STEP 01</div>
+          <div class="pv-step-title">컨설팅 및 진단</div>
+          <ul class="pv-step-list"><li>인프라 진단 및 분석</li><li>요구사항 분석</li><li>구축 전략 수립</li></ul>
+        </div>
+        <div class="pv-step-arrow">→</div>
+        <div class="pv-step reveal">
+          <div class="pv-step-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="pv-step-num">STEP 02</div>
+          <div class="pv-step-title">설계</div>
+          <ul class="pv-step-list"><li>아키텍처 설계</li><li>클러스터 및 스토리지 설계</li><li>보안 및 네트워크 설계</li></ul>
+        </div>
+        <div class="pv-step-arrow">→</div>
+        <div class="pv-step reveal">
+          <div class="pv-step-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+          <div class="pv-step-num">STEP 03</div>
+          <div class="pv-step-title">구축</div>
+          <ul class="pv-step-list"><li>Proxmox VE 설치</li><li>클러스터 구성</li><li>스토리지 및 네트워크 구성</li></ul>
+        </div>
+        <div class="pv-step-arrow">→</div>
+        <div class="pv-step reveal">
+          <div class="pv-step-icon"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div>
+          <div class="pv-step-num">STEP 04</div>
+          <div class="pv-step-title">마이그레이션</div>
+          <ul class="pv-step-list"><li>VMware 등 기존 환경 VM 마이그레이션</li><li>서비스 전환 지원</li></ul>
+        </div>
+        <div class="pv-step-arrow">→</div>
+        <div class="pv-step reveal">
+          <div class="pv-step-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.59 3.41 2 2 0 0 1 3.55 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.72a16 16 0 0 0 6 6l.87-.72a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="pv-step-num">STEP 05</div>
+          <div class="pv-step-title">운영 지원</div>
+          <ul class="pv-step-list"><li>모니터링 및 유지보수</li><li>기술 지원 및 장애 대응</li><li>성능 최적화</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="pv-cta">
+    <div class="pv-cta-inner">
+      <div class="pv-cta-title reveal">Proxmox VE 기반의 가상화 인프라를 구축해보세요!</div>
+      <div class="pv-cta-sub reveal">브론토시스는 Proxmox VE 기반의 안정적이고 효율적인<br>가상화 인프라 구축을 전문적으로 지원합니다.</div>
+      <div class="pv-cta-btns reveal">
+        <button class="pv-cta-btn-primary" onclick="goPage('inquiry')">
+          <span class="pv-cta-btn-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+          구축 문의
+        </button>
+        <button class="pv-cta-btn-outline" onclick="goPage('inquiry')">
+          <span class="pv-cta-btn-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.59 3.41 2 2 0 0 1 3.55 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.72a16 16 0 0 0 6 6l.87-.72a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          기술 상담
+        </button>
+        <button class="pv-cta-btn-outline" onclick="goPage('inquiry')">
+          <span class="pv-cta-btn-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+          유지보수 문의
+        </button>
+      </div>
+    </div>
   </div>
 </div>
-  <div class="page-wrap">
-  
-  <div class="placeholder-block"><strong>Virtualization Platform 상세 소개 영역</strong>가상화 구조도, 플랫폼 구성, 도입 효과, 사례 등이 포함됩니다.</div>
-  <div class="info-grid"><div class="info-card"><h4>서버 가상화</h4><p>물리 서버 자원을 최적 분배하여 운영 비용 절감</p></div><div class="info-card"><h4>플랫폼 구축</h4><p>비즈니스 요구에 맞는 맞춤형 플랫폼 설계 및 개발</p></div><div class="info-card"><h4>확장성</h4><p>트래픽 변화에 유연하게 대응하는 스케일아웃 구조</p></div></div>
-</div></div>
 
 <!-- SERVICE: System Implementation -->
 <div id="sysimpl" class="page">
