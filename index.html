@@ -290,6 +290,7 @@
     .footer-brand-num { font-size: 15px; color: rgba(255,255,255,0.82); line-height: 1.8; margin-bottom: 8px; }
     .footer-brand-addr { font-size: 15px; color: rgba(255,255,255,0.82); line-height: 1.8; margin-bottom: 8px; }
     .footer-brand-tel { font-size: 17px; font-weight: 700; color: #fff; margin-top: 14px; letter-spacing: 0.3px; }
+    .footer-brand-mail { font-size: 17px; font-weight: 700; color: #fff; margin-top: 14px; letter-spacing: 0.3px; }
     .footer-col h4 { font-size: 16px; font-weight: 700; color: #ffffff; margin-bottom: 18px; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.9; }
     .footer-col a {
       display: block; font-size: 16px; color: rgba(255,255,255,0.82); padding: 6px 0;
@@ -810,7 +811,7 @@
   .nh-service-sub { font-size: 15px; color: #8b9aaa; line-height: 1.7; }
   .nh-service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .nh-svc-card {
-    border: 1px solid #e7e5e4; border-radius: 12px;
+    border: 4px solid #e7e5e4; border-radius: 12px;
     padding: 36px 32px; cursor: pointer;
     transition: all 0.2s; position: relative; overflow: hidden;
   }
@@ -823,7 +824,7 @@
   .nh-svc-card:hover { border-color: #e77000; box-shadow: 0 8px 32px rgba(231,112,0,0.10); }
   .nh-svc-card:hover::after { transform: scaleX(1); }
   .nh-svc-num {
-    font-size: 36px; font-weight: 900; color: #f1f0ef;
+    font-size: 36px; font-weight: 900; color: #1f2e3d;
     margin-bottom: 20px; letter-spacing: -1px;
   }
   .nh-svc-title {
@@ -1085,13 +1086,13 @@
       <div class="nh-service-header">
         <div class="nh-service-tag">Our Service</div>
         <div class="nh-service-title">전문 서비스</div>
-        <div class="nh-service-sub">시스템 구축부터 유지보수까지 전 과정을 책임집니다</div>
+        <div class="nh-service-sub">시스템 구축부터 유지보수까지 전 과정을 책임집니다.</div>
       </div>
       <div class="nh-service-grid">
         <div class="nh-svc-card" onclick="goPage('sysimpl')">
           <div class="nh-svc-num">01</div>
           <div class="nh-svc-title">System Implementation</div>
-          <div class="nh-svc-desc">고객 환경에 최적화된 시스템 설계 및 구축. 요구사항 분석부터 운영까지 원스톱으로 지원합니다.</div>
+          <div class="nh-svc-desc">고객 환경에 최적화된 시스템 설계 및 구축, 운영까지 원스톱으로 지원합니다.</div>
           <div class="nh-svc-arrow">→</div>
         </div>
         <div class="nh-svc-card" onclick="goPage('sysimpl')">
@@ -1154,6 +1155,8 @@
         <div class="footer-brand-num">사업자등록번호 289-86-03701</div>
         <div class="footer-brand-addr">서울특별시 강서구 공항대로 247 퀸즈파크나인 704호 (마곡동)</div>
         <div class="footer-brand-tel">T. 02-6080-0609</div>
+        <!-- <div class="footer-brand-mail">jhbaek@brontosys.co.kr</div> -->
+
       </div>
       <div class="footer-col"><h4>Company</h4><a onclick="goPage('greeting')">회사소개</a><a onclick="goPage('clients')">주요 고객사</a><a onclick="goPage('orgchart')">조직도</a><a onclick="goPage('location')">오시는 길</a></div>
       <div class="footer-col"><h4>Solution</h4><a onclick="goPage('falcon')">FalconStor</a><a onclick="goPage('Veeam')">Veeam</a><a onclick="goPage('virtualization')">Virtualization Platform</a><a onclick="goPage('rpa')">RPA Automation</a></div>
@@ -2198,25 +2201,25 @@
   </div>
   <div style="background:#fff;padding:64px 40px 80px;">
     <div style="max-width:1240px;margin:0 auto;text-align:center;">
-      <h3 class="reveal reveal-delay-1" style="font-size:28px;font-weight:900;color:#0d2140;margin:0;letter-spacing:-0.5px;">Proxmox VE</h3>
+      <h3 class="reveal reveal-delay-1" style="font-size:40px;font-weight:900;color:#0d2140;margin:0;letter-spacing:-0.5px;">Proxmox VE</h3>
       <img class="reveal reveal-delay-2" src="image/Proxmox_diagram.png" alt="Proxmox VE 아키텍처 다이어그램" style="width:100%;max-width:1240px;display:block;margin:0 auto;"/>
     </div>
   </div>
 
   <style>
-    .pv-num{font-size:13px;font-weight:800;color:#e8500a;letter-spacing:2px;margin-bottom:6px;}
-    .pv-stitle{font-size:26px;font-weight:900;color:#0d2140;margin-bottom:40px;}
+    .pv-num{font-size:20px;font-weight:800;color:#e8500a;letter-spacing:2px;margin-bottom:6px;}
+    .pv-stitle{font-size:28px;font-weight:900;color:#0d2140;margin-bottom:40px;}
     /* 핵심 기능 */
     .pv-func{background:#f7f8fa;padding:80px 40px;}
     .pv-func-inner{max-width:1240px;margin:0 auto;}
     .pv-func-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;}
     .pv-func-card{background:#fff;border-radius:10px;padding:28px 18px;border:1px solid #eef0f4;}
-    .pv-func-card-num{font-size:12px;font-weight:800;color:#e8500a;letter-spacing:1px;margin-bottom:12px;}
+    .pv-func-card-num{font-size:15px;font-weight:800;color:#e8500a;letter-spacing:1px;margin-bottom:12px;}
     .pv-func-card-icon{margin-bottom:14px;}
     .pv-func-card-icon svg{width:38px;height:38px;stroke:#e8500a;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
-    .pv-func-card-title{font-size:14px;font-weight:800;color:#0d2140;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid #eee;}
+    .pv-func-card-title{font-size:18px;font-weight:800;color:#0d2140;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid #eee;}
     .pv-func-card-list{list-style:none;padding:0;margin:0;}
-    .pv-func-card-list li{font-size:12.5px;color:#3d4f6a;line-height:1.9;padding-left:10px;position:relative;}
+    .pv-func-card-list li{font-size:14.5px;font-weight:600;color:#3d4f6a;line-height:1.9;padding-left:10px;position:relative; }
     .pv-func-card-list li::before{content:'·';position:absolute;left:0;color:#e8500a;font-weight:900;}
     @media(max-width:1100px){.pv-func-grid{grid-template-columns:repeat(3,1fr);}}
     @media(max-width:600px){.pv-func-grid{grid-template-columns:repeat(2,1fr);}}
@@ -2227,8 +2230,8 @@
     .pv-effect-card{background:#1a2030;border-radius:12px;padding:36px 24px;}
     .pv-effect-card-icon{width:52px;height:52px;border-radius:50%;background:rgba(232,80,10,.15);display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
     .pv-effect-card-icon svg{width:24px;height:24px;stroke:#e8500a;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-    .pv-effect-card-title{font-size:16px;font-weight:800;color:#fff;margin-bottom:12px;}
-    .pv-effect-card-desc{font-size:13px;color:#8b9aaa;line-height:1.9;}
+    .pv-effect-card-title{font-size:18px;font-weight:800;color:#fff;margin-bottom:12px;}
+    .pv-effect-card-desc{font-size:14.5px;font-weight:bold;color:#8b9aaa;line-height:1.9;}
     @media(max-width:1000px){.pv-effect-grid{grid-template-columns:repeat(3,1fr);}}
     @media(max-width:600px){.pv-effect-grid{grid-template-columns:1fr;}}
     /* 활용 분야 */
@@ -2238,8 +2241,8 @@
     .pv-use-card{border:1px solid #e4e8ee;border-radius:10px;padding:32px 28px;display:flex;gap:20px;align-items:flex-start;}
     .pv-use-icon{flex:0 0 auto;width:48px;height:48px;border-radius:50%;border:2px solid #e8500a;display:flex;align-items:center;justify-content:center;}
     .pv-use-icon svg{width:22px;height:22px;stroke:#e8500a;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-    .pv-use-text-title{font-size:15px;font-weight:800;color:#0d2140;margin-bottom:8px;}
-    .pv-use-text-desc{font-size:13px;color:#3d4f6a;line-height:1.8;}
+    .pv-use-text-title{font-size:17px;font-weight:800;color:#0d2140;margin-bottom:8px;}
+    .pv-use-text-desc{font-size:14.5px;font-weight:600;color:#3d4f6a;line-height:1.8;}
     @media(max-width:900px){.pv-use-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:600px){.pv-use-grid{grid-template-columns:1fr;}}
     /* 구축 서비스 */
@@ -2250,10 +2253,10 @@
     .pv-step-arrow{flex:0 0 auto;color:#e8500a;font-size:22px;padding-top:36px;line-height:1;}
     .pv-step-icon{width:48px;height:48px;border-radius:50%;background:#fff;border:2px solid #e8500a;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
     .pv-step-icon svg{width:22px;height:22px;stroke:#e8500a;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-    .pv-step-num{font-size:11px;font-weight:800;color:#e8500a;letter-spacing:1.5px;margin-bottom:6px;}
-    .pv-step-title{font-size:15px;font-weight:800;color:#0d2140;margin-bottom:12px;}
+    .pv-step-num{font-size:13px;font-weight:800;color:#e8500a;letter-spacing:1.5px;margin-bottom:6px;}
+    .pv-step-title{font-size:18px;font-weight:800;color:#0d2140;margin-bottom:12px;}
     .pv-step-list{list-style:none;padding:0;margin:0;}
-    .pv-step-list li{font-size:12.5px;color:#3d4f6a;line-height:1.9;padding-left:10px;position:relative;}
+    .pv-step-list li{font-size:14px;font-weight:600;color:#3d4f6a;line-height:1.9;padding-left:10px;position:relative;}
     .pv-step-list li::before{content:'·';position:absolute;left:0;color:#e8500a;font-weight:900;}
     @media(max-width:900px){.pv-steps-row{flex-direction:column;gap:24px;}.pv-step-arrow{display:none;}.pv-step{padding:0;}}
     /* CTA */
@@ -2272,7 +2275,7 @@
   <!-- 02. 핵심 기능 -->
   <div class="pv-func">
     <div class="pv-func-inner">
-      <div class="pv-num reveal">02</div>
+      <div class="pv-num reveal">01</div>
       <div class="pv-stitle reveal">Proxmox VE 핵심 기능</div>
       <div class="pv-func-grid">
         <div class="pv-func-card reveal">
@@ -2281,7 +2284,7 @@
           <div class="pv-func-card-title">가상화</div>
           <ul class="pv-func-card-list">
             <li>KVM 기반 가상화</li>
-            <li>Windows / Linux VM 지원</li>
+            <li>Windows / Linux 지원</li>
             <li>GPU / PCI Passthrough</li>
             <li>라이브 마이그레이션</li>
           </ul>
@@ -2348,28 +2351,28 @@
   <!-- 03. 도입 효과 -->
   <div class="pv-effect">
     <div class="pv-effect-inner">
-      <div class="pv-num reveal">03</div>
+      <div class="pv-num reveal">02</div>
       <div class="pv-stitle reveal" style="color:#fff;">Proxmox VE 도입 효과</div>
       <div class="pv-effect-grid">
         <div class="pv-effect-card reveal">
           <div class="pv-effect-card-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
           <div class="pv-effect-card-title">비용 절감</div>
-          <div class="pv-effect-card-desc">오픈소스 기반으로 라이선스 비용 절감 및 TCO 최소화</div>
+          <div class="pv-effect-card-desc">오픈소스 기반으로 라이선스<br>비용 절감 및 TCO 최소화</div>
         </div>
         <div class="pv-effect-card reveal">
           <div class="pv-effect-card-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
           <div class="pv-effect-card-title">운영 효율성 향상</div>
-          <div class="pv-effect-card-desc">통합 관리 및 자동화를 통해 운영 효율성과 생산성 극대화</div>
+          <div class="pv-effect-card-desc">통합 관리 및 자동화를 통해 <br>운영 효율성과 생산성 극대화</div>
         </div>
         <div class="pv-effect-card reveal">
           <div class="pv-effect-card-icon"><svg viewBox="0 0 24 24"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div>
           <div class="pv-effect-card-title">확장성 및 유연성</div>
-          <div class="pv-effect-card-desc">가상화, 컨테이너, 스토리지 등 유연한 확장 및 환경 구성 가능</div>
+          <div class="pv-effect-card-desc">가상화, 컨테이너, 스토리지 등 <br>유연한 확장 및 환경 구성 가능</div>
         </div>
         <div class="pv-effect-card reveal">
           <div class="pv-effect-card-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
           <div class="pv-effect-card-title">안정성 및 보안 강화</div>
-          <div class="pv-effect-card-desc">클러스터 및 백업 기능으로 안정적인 서비스 운영 및 데이터 보호</div>
+          <div class="pv-effect-card-desc">클러스터 및 백업 기능으로 <br> 서비스 운영 및 데이터 보호</div>
         </div>
         <div class="pv-effect-card reveal">
           <div class="pv-effect-card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg></div>
@@ -2383,7 +2386,7 @@
   <!-- 04. 활용 분야 -->
   <div class="pv-use">
     <div class="pv-use-inner">
-      <div class="pv-num reveal">04</div>
+      <div class="pv-num reveal">03</div>
       <div class="pv-stitle reveal">Proxmox VE 활용 분야</div>
       <div class="pv-use-grid">
         <div class="pv-use-card reveal">
@@ -2400,7 +2403,7 @@
         </div>
         <div class="pv-use-card reveal">
           <div class="pv-use-icon"><svg viewBox="0 0 24 24"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg></div>
-          <div><div class="pv-use-text-title">백업 / DR 환경</div><div class="pv-use-text-desc">백업 서버 및 DR 환경 구축 재해 복구 및 데이터 보호</div></div>
+          <div><div class="pv-use-text-title">백업 / DR 환경</div><div class="pv-use-text-desc">백업 서버, DR 환경 구축 재해 복구, 데이터 보호</div></div>
         </div>
         <div class="pv-use-card reveal">
           <div class="pv-use-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
@@ -2408,7 +2411,7 @@
         </div>
         <div class="pv-use-card reveal">
           <div class="pv-use-icon"><svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
-          <div><div class="pv-use-text-title">MSP / 클라우드 서비스</div><div class="pv-use-text-desc">클라우드 인프라 서비스 제공 멀티 테넌트 환경 구축</div></div>
+          <div><div class="pv-use-text-title">MSP / 클라우드 서비스</div><div class="pv-use-text-desc">클라우드 인프라 서비스 제공 멀티 테넌시 구축</div></div>
         </div>
       </div>
     </div>
@@ -2417,7 +2420,7 @@
   <!-- 05. 구축 서비스 -->
   <div class="pv-steps-section">
     <div class="pv-steps-inner">
-      <div class="pv-num reveal">05</div>
+      <div class="pv-num reveal">04</div>
       <div class="pv-stitle reveal">브론토시스 Proxmox 구축 서비스</div>
       <div class="pv-steps-row">
         <div class="pv-step reveal">
@@ -2445,7 +2448,7 @@
           <div class="pv-step-icon"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div>
           <div class="pv-step-num">STEP 04</div>
           <div class="pv-step-title">마이그레이션</div>
-          <ul class="pv-step-list"><li>VMware 등 기존 환경 VM 마이그레이션</li><li>서비스 전환 지원</li></ul>
+          <ul class="pv-step-list"><li>기존 환경 VM 마이그레이션</li><li>서비스 전환 지원</li></ul>
         </div>
         <div class="pv-step-arrow">→</div>
         <div class="pv-step reveal">
@@ -2468,14 +2471,14 @@
           <span class="pv-cta-btn-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
           구축 문의
         </button>
-        <button class="pv-cta-btn-outline" onclick="goPage('inquiry')">
+        <!-- <button class="pv-cta-btn-outline" onclick="goPage('inquiry')">
           <span class="pv-cta-btn-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.59 3.41 2 2 0 0 1 3.55 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.72a16 16 0 0 0 6 6l.87-.72a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
           기술 상담
         </button>
         <button class="pv-cta-btn-outline" onclick="goPage('inquiry')">
           <span class="pv-cta-btn-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           유지보수 문의
-        </button>
+        </button> -->
       </div>
     </div>
   </div>
