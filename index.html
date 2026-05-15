@@ -282,7 +282,7 @@
     .cbtn-white:hover { border-color: rgba(255,255,255,0.7); }
 
     /* ======== FOOTER ======== */
-    .footer { background: #1a1c20; color: #8b9aaa; padding: 40px 24px 35px; }
+    .footer { background: #1a1c20; color: #8b9aaa; padding: 40px 24px 10px; border-top: 1px solid rgba(255,255,255,0.08); }
     .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 36px; }
     .footer-logo-img { height: 40px; width: auto; object-fit: contain; margin-bottom: 16px; filter: brightness(2.2) contrast(1.0); }
     .footer-brand-name { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.82); margin-bottom: 4px; }
@@ -1160,7 +1160,9 @@
       </div>
       <div class="footer-col"><h4>Company</h4><a onclick="goPage('greeting')">회사소개</a><a onclick="goPage('clients')">주요 고객사</a><a onclick="goPage('orgchart')">조직도</a><a onclick="goPage('location')">오시는 길</a></div>
       <div class="footer-col"><h4>Solution</h4><a onclick="goPage('falcon')">FalconStor</a><a onclick="goPage('Veeam')">Veeam</a><a onclick="goPage('virtualization')">Virtualization Platform</a><a onclick="goPage('rpa')">RPA Automation</a></div>
-      <div class="footer-col"><h4>Service / Contact</h4><a onclick="goPage('sysimpl')">System Implementation</a><a onclick="goPage('notice')">공지사항</a><a onclick="goPage('inquiry')">문의하기</a></div>
+      <div class="footer-col"><h4>Service / Contact</h4><a onclick="goPage('sysimpl')">System Implementation</a><a onclick="goPage('notice')">공지사항</a><a onclick="goPage('inquiry')">문의하기</a>
+        <img src="image/Falconstor_Korea_Partner.png" alt="FalconStor Official Authorized Partner" onclick="document.getElementById('partner-modal').style.display='flex'" style="display:block;width:100%;max-width:180px;margin-top:20px;border-radius:8px;cursor:pointer;opacity:.92;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.92'"/>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
@@ -1168,6 +1170,11 @@
       <span>© 2026 Brontosys Co., Ltd. All rights reserved.</span>
       <!-- <span>개인정보처리방침 · 이용약관</span> -->
     </div>
+  </div>
+
+  <!-- 파트너 인증서 팝업 -->
+  <div id="partner-modal" onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;">
+    <img src="image/Falconstor_Korea_Partner.png" alt="FalconStor Official Authorized Partner" onclick="event.stopPropagation()" style="max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,.6);cursor:default;"/>
   </div>
 
   <!-- 슬라이더 & 솔루션 탭 JS -->
@@ -1662,18 +1669,306 @@
 <!-- SOLUTION: RPA -->
 <div id="rpa" class="page">
   <div class="greeting-header">
-  <div style="max-width:1100px;margin:0 auto;">
-    <div style="margin-bottom:14px;"><span class="page-breadcrumb">Solution › <span>RPA Automation</span></span></div>
-    <h2>RPA Automation</h2>
-    <div class="greeting-header-sub">반복 업무를 자동화하여 업무 효율성과 생산성을 극대화합니다.</div>
-    <div class="greeting-header-line"></div>
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="margin-bottom:14px;"><span class="page-breadcrumb">Solution › <span>RPA</span></span></div>
+      <h2 class="reveal">RPA (Robotic Process Automation)</h2>
+      <div class="greeting-header-sub reveal reveal-delay-1">반복적인 업무는 로봇에게, 사람은 더 가치있는 일에 집중하세요. Automation Anywhere 기반의 전문 RPA 솔루션입니다.</div>
+      <div class="greeting-header-line reveal reveal-delay-2"></div>
+    </div>
+  </div>
+  <style>
+    /* 공통 섹션 타이틀 */
+    .ra-stitle2{font-size:28px;font-weight:900;color:#0d2140;text-align:center;margin-bottom:12px;letter-spacing:-0.5px;}
+    .ra-ssub{font-size:14px;color:#3d4f6a;text-align:center;line-height:1.9;margin-bottom:48px;}
+    /* 핵심 기능 */
+    .ra-func{background:#f7f8fa;padding:80px 40px;}
+    .ra-func-inner{max-width:1240px;margin:0 auto;}
+    .ra-func-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+    .ra-func-card{background:#fff;border-radius:10px;padding:28px 18px 24px;border:1px solid #eef0f4;text-align:center;}
+    .ra-func-icon2{width:52px;height:52px;border-radius:50%;border:2px solid #e8500a;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+    .ra-func-icon2 svg{width:24px;height:24px;stroke:#e8500a;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+    .ra-func-card-title2{font-size:14px;font-weight:800;color:#e8500a;text-align:center;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid #eee;}
+    .ra-func-card-list{list-style:none;padding:0;margin:0;text-align:left;}
+    .ra-func-card-list li{font-size:14.5px;color:#3d4f6a;line-height:1.9;padding-left:10px;position:relative;}
+    .ra-func-card-list li::before{content:'·';position:absolute;left:0;color:#e8500a;font-weight:900;}
+    @media(max-width:1000px){.ra-func-grid{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:600px){.ra-func-grid{grid-template-columns:repeat(2,1fr);}}
+    /* 도입 기대 효과 */
+    .ra-effect{background:#fff;padding:80px 40px;}
+    .ra-effect-inner{max-width:1240px;margin:0 auto;}
+    .ra-effect-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;}
+    .ra-effect-card{border:1px solid #e4e8ee;border-radius:10px;overflow:hidden;}
+    .ra-effect-img-wrap{position:relative;}
+    .ra-effect-img-wrap img{width:100%;height:160px;object-fit:cover;display:block;}
+    .ra-effect-badge{position:absolute;bottom:10px;left:10px;width:34px;height:34px;border-radius:50%;background:#e8500a;display:flex;align-items:center;justify-content:center;}
+    .ra-effect-badge svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+    .ra-effect-body{padding:18px 16px;}
+    .ra-effect-title{font-size:16px;font-weight:800;color:#0d2140;margin-bottom:10px;}
+    .ra-effect-list{list-style:none;padding:0;margin:0;}
+    .ra-effect-list li{font-size:14.5px;color:#3d4f6a;line-height:1.9;padding-left:10px;position:relative;}
+    .ra-effect-list li::before{content:'·';position:absolute;left:0;color:#e8500a;font-weight:900;}
+    @media(max-width:1000px){.ra-effect-grid{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:600px){.ra-effect-grid{grid-template-columns:1fr;}}
+    /* 산업별 활용 */
+    .ra-industry{background:#f7f8fa;padding:80px 40px;}
+    .ra-industry-inner{max-width:1240px;margin:0 auto;}
+    .ra-industry-grid{display:grid;grid-template-columns:repeat(6,1fr);background:#fff;border:1px solid #e0e4ea;border-radius:10px;overflow:hidden;}
+    .ra-industry-col{padding:24px 16px;border-right:1px solid #e0e4ea;}
+    .ra-industry-col:last-child{border-right:none;}
+    .ra-industry-col-title{font-size:14px;font-weight:800;color:#0d2140;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #e8500a;}
+    .ra-industry-col-list{list-style:none;padding:0;margin:0;}
+    .ra-industry-col-list li{font-size:12px;color:#3d4f6a;line-height:1.9;padding-left:8px;position:relative;}
+    .ra-industry-col-list li::before{content:'·';position:absolute;left:0;color:#e8500a;font-weight:900;}
+    @media(max-width:900px){.ra-industry-grid{grid-template-columns:repeat(3,1fr);}.ra-industry-col{border-bottom:1px solid #e0e4ea;}}
+    @media(max-width:500px){.ra-industry-grid{grid-template-columns:repeat(2,1fr);}}
+    /* 구축 프로세스 */
+    .ra-steps-section{background:#fff;padding:80px 40px;}
+    .ra-steps-inner{max-width:1240px;margin:0 auto;}
+    .ra-steps-row{display:flex;align-items:flex-start;}
+    .ra-step{flex:1;padding:0 8px;text-align:center;}
+    .ra-step-conn{flex:0 0 28px;padding-top:22px;}
+    .ra-step-conn-line{border-top:2px dashed #d0d5dd;position:relative;width:100%;}
+    .ra-step-conn-line::after{content:'';position:absolute;right:-5px;top:-6px;width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:8px solid #e8500a;}
+    .ra-step-icon2{width:44px;height:44px;border-radius:50%;background:#fff3ee;border:2px solid #e8500a;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;}
+    .ra-step-icon2 svg{width:20px;height:20px;stroke:#e8500a;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+    .ra-step-label{font-size:13px;font-weight:800;color:#e8500a;margin-bottom:8px;}
+    .ra-step-list2{list-style:none;padding:0;margin:0;text-align:left;}
+    .ra-step-list2 li{font-size:14px;color:#3d4f6a;line-height:1.9;padding-left:10px;position:relative;}
+    .ra-step-list2 li::before{content:'·';position:absolute;left:0;color:#e8500a;font-weight:900;}
+    @media(max-width:900px){.ra-steps-row{flex-direction:column;gap:16px;}.ra-step-conn{display:none;}.ra-step{padding:0;text-align:left;}}
+    /* CTA */
+    .ra-cta{background:#111827;padding:64px 40px;}
+    .ra-cta-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:32px;}
+    .ra-cta-text-title{font-size:26px;font-weight:900;color:#fff;margin-bottom:10px;letter-spacing:-0.3px;}
+    .ra-cta-text-sub{font-size:15px;color:#8b9aaa;line-height:1.9;}
+    .ra-cta-btns{display:flex;gap:14px;flex-wrap:wrap;flex-shrink:0;}
+    .ra-cta-btn-primary{background:#e8500a;color:#fff;border:none;border-radius:6px;padding:14px 28px;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;}
+    .ra-cta-btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.3);border-radius:6px;padding:14px 28px;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;}
+    .ra-cta-btn-primary:hover{opacity:.85;}
+    .ra-cta-btn-outline:hover{border-color:rgba(255,255,255,.6);}
+  </style>
+
+  <!-- 01. 다이어그램 -->
+  <div style="background:#fff;padding:64px 40px 0px;">
+    <div style="max-width:1240px;margin:0 auto;text-align:center;">
+      <img class="reveal" src="image/AutomationAnywhere_logo.png" alt="Automation Anywhere" style="display:block;margin:0 auto 20px;max-height:64px;width:auto;"/>
+      <h3 class="reveal reveal-delay-1" style="font-size:28px;font-weight:900;color:#0d2140;margin:0;letter-spacing:-0.5px;">Automation Anywhere RPA Platform</h3>
+      <img class="reveal reveal-delay-2" src="image/RPA_diagram.png" alt="Automation Anywhere RPA 다이어그램" style="width:100%;max-width:1240px;display:block;margin:0 auto;"/>
+    </div>
+  </div>
+
+  <!-- 02. 핵심 기능 -->
+  <div class="ra-func">
+    <div class="ra-func-inner">
+      <h3 class="ra-stitle2 reveal">Automation Anywhere RPA 핵심 기능</h3>
+      <p class="ra-ssub reveal">소프트웨어 로봇이 반복 업무를 정확하게 자동 처리하여 비즈니스 효율을 높입니다.</p>
+      <div class="ra-func-grid">
+        <div class="ra-func-card reveal">
+          <div class="ra-func-icon2"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+          <div class="ra-func-card-title2">01. 프로세스 자동화</div>
+          <ul class="ra-func-card-list">
+            <li>비정형/반복 업무 자동 수행</li>
+            <li>다수 시스템 연계 자동화</li>
+            <li>정해진 규칙 기반 정확한 처리</li>
+            <li>24/7 무중단 업무 처리</li>
+          </ul>
+        </div>
+        <div class="ra-func-card reveal">
+          <div class="ra-func-icon2"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+          <div class="ra-func-card-title2">02. 지능형 문서 처리</div>
+          <ul class="ra-func-card-list">
+            <li>OCR 기반 문서 데이터 추출</li>
+            <li>계약서 / 인보이스 자동 처리</li>
+            <li>이미지 / 스캔 문서 인식</li>
+            <li>데이터 검증 및 분류</li>
+          </ul>
+        </div>
+        <div class="ra-func-card reveal">
+          <div class="ra-func-icon2"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+          <div class="ra-func-card-title2">03. 예외 처리 및 알림</div>
+          <ul class="ra-func-card-list">
+            <li>예외 상황 자동 감지</li>
+            <li>이메일 / 메신저 자동 알림</li>
+            <li>업무 승인 및 예외 처리 흐름</li>
+            <li>재처리 및 로그 관리</li>
+          </ul>
+        </div>
+        <div class="ra-func-card reveal">
+          <div class="ra-func-icon2"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <div class="ra-func-card-title2">04. 통합 관리 및 보안</div>
+          <ul class="ra-func-card-list">
+            <li>중앙 통합 관리 콘솔 제공</li>
+            <li>역할 기반 권한 관리</li>
+            <li>감사 로그 및 추적 기능</li>
+            <li>보안 정책 및 규정 준수</li>
+          </ul>
+        </div>
+        <div class="ra-func-card reveal">
+          <div class="ra-func-icon2"><svg viewBox="0 0 24 24"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div>
+          <div class="ra-func-card-title2">05. 확장성 및 유연성</div>
+          <ul class="ra-func-card-list">
+            <li>다양한 시스템과 연계 지원</li>
+            <li>필요에 따른 봇 확장 기능</li>
+            <li>모듈화된 자동화 설계</li>
+            <li>클라우드 / 온프레미스 지원</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03. 도입 기대 효과 -->
+  <div class="ra-effect">
+    <div class="ra-effect-inner">
+      <h3 class="ra-stitle2 reveal">Automation Anywhere RPA 도입 기대 효과</h3>
+      <p class="ra-ssub reveal">RPA 도입으로 업무 효율과 정확도를 높이고 비용을 절감합니다.</p>
+      <div class="ra-effect-grid">
+        <div class="ra-effect-card reveal">
+          <div class="ra-effect-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80" alt="운영 효율 향상"/>
+            <div class="ra-effect-badge"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+          </div>
+          <div class="ra-effect-body">
+            <div class="ra-effect-title">운영 효율 향상</div>
+            <ul class="ra-effect-list"><li>반복 업무 자동화</li><li>처리 시간 단축</li><li>업무 생산성 향상</li></ul>
+          </div>
+        </div>
+        <div class="ra-effect-card reveal">
+          <div class="ra-effect-img-wrap">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" alt="비용 절감"/>
+            <div class="ra-effect-badge"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          </div>
+          <div class="ra-effect-body">
+            <div class="ra-effect-title">비용 절감</div>
+            <ul class="ra-effect-list"><li>인적 오류 감소</li><li>운영 비용 절감</li><li>ROI 극대화</li></ul>
+          </div>
+        </div>
+        <div class="ra-effect-card reveal">
+          <div class="ra-effect-img-wrap">
+            <img src="https://images.unsplash.com/photo-1485802240079-a8245c843b95?auto=format&fit=crop&w=800&q=80" alt="정확도 향상"/>
+            <div class="ra-effect-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          </div>
+          <div class="ra-effect-body">
+            <div class="ra-effect-title">정확도 향상</div>
+            <ul class="ra-effect-list"><li>100% 정확한 데이터 처리</li><li>휴먼 에러 최소화</li><li>업무 품질 개선</li></ul>
+          </div>
+        </div>
+        <div class="ra-effect-card reveal">
+          <div class="ra-effect-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="업무 연속성 확보"/>
+            <div class="ra-effect-badge"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+          </div>
+          <div class="ra-effect-body">
+            <div class="ra-effect-title">업무 연속성 확보</div>
+            <ul class="ra-effect-list"><li>24/7 무중단 업무 수행</li><li>비즈니스 연속성 강화</li><li>예외 상황 신속 대응</li></ul>
+          </div>
+        </div>
+        <div class="ra-effect-card reveal">
+          <div class="ra-effect-img-wrap">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="직원 만족도 향상"/>
+            <div class="ra-effect-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+          </div>
+          <div class="ra-effect-body">
+            <div class="ra-effect-title">직원 만족도 향상</div>
+            <ul class="ra-effect-list"><li>단순 반복 업무 해소</li><li>핵심 업무 집중 가능</li><li>업무 만족도 향상</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04. 산업별 활용 -->
+  <div class="ra-industry">
+    <div class="ra-industry-inner">
+      <h3 class="ra-stitle2 reveal">다양한 산업에서의 RPA 활용</h3>
+      <p class="ra-ssub reveal">금융, 제조, 공공 등 다양한 산업 전반에 걸쳐 업무 자동화를 실현합니다.</p>
+      <div class="ra-industry-grid reveal">
+        <div class="ra-industry-col" style="background:#fff;">
+          <div class="ra-industry-col-title">금융</div>
+          <ul class="ra-industry-col-list"><li>계좌 개설 및 관리</li><li>대출 심사 프로세스</li><li>보고서 자동 생성</li><li>거래 내역 검증</li></ul>
+        </div>
+        <div class="ra-industry-col" style="background:#fff;">
+          <div class="ra-industry-col-title">제조</div>
+          <ul class="ra-industry-col-list"><li>발주 및 재고 관리</li><li>생산 계획 수립 지원</li><li>품질 검사 데이터 처리</li><li>공급망 데이터 연계</li></ul>
+        </div>
+        <div class="ra-industry-col" style="background:#fff;">
+          <div class="ra-industry-col-title">유통/물류</div>
+          <ul class="ra-industry-col-list"><li>주문 처리 자동화</li><li>재고 및 물고 관리</li><li>배송 추적 및 업데이트</li><li>반품/교환 처리</li></ul>
+        </div>
+        <div class="ra-industry-col" style="background:#fff;">
+          <div class="ra-industry-col-title">IT/통신</div>
+          <ul class="ra-industry-col-list"><li>기업 신청 처리 자동화</li><li>장애 접수 및 관리</li><li>시스템 모니터링</li><li>계정 및 권한 관리</li></ul>
+        </div>
+        <div class="ra-industry-col" style="background:#fff;">
+          <div class="ra-industry-col-title">공공</div>
+          <ul class="ra-industry-col-list"><li>민원 신청 처리</li><li>서류 검토 및 분류</li><li>데이터 입력 자동화</li><li>보고서 및 통계 생성</li></ul>
+        </div>
+        <div class="ra-industry-col" style="background:#fff;">
+          <div class="ra-industry-col-title">의료/헬스케어</div>
+          <ul class="ra-industry-col-list"><li>예약 및 접수 관리</li><li>보험 청구 처리</li><li>환자 데이터 관리</li><li>의료비 청산 자동화</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05. 구축 프로세스 -->
+  <div class="ra-steps-section">
+    <div class="ra-steps-inner">
+      <h3 class="ra-stitle2 reveal">브론토시스 RPA 구축 프로세스</h3>
+      <p class="ra-ssub reveal">체계적인 6단계 프로세스로 안정적인 RPA 도입과 지속적인 운영을 지원합니다.</p>
+      <div class="ra-steps-row">
+        <div class="ra-step reveal">
+          <div class="ra-step-icon2"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <div class="ra-step-label">01. 컨설팅</div>
+          <ul class="ra-step-list2"><li>업무 분석 및 진단</li><li>자동화 대상 발굴</li><li>ROI 분석 및 제안</li></ul>
+        </div>
+        <div class="ra-step-conn"><div class="ra-step-conn-line"></div></div>
+        <div class="ra-step reveal">
+          <div class="ra-step-icon2"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="ra-step-label">02. 설계</div>
+          <ul class="ra-step-list2"><li>프로세스 설계</li><li>자동화 범위 정의</li><li>예외 처리 설계</li></ul>
+        </div>
+        <div class="ra-step-conn"><div class="ra-step-conn-line"></div></div>
+        <div class="ra-step reveal">
+          <div class="ra-step-icon2"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <div class="ra-step-label">03. 개발</div>
+          <ul class="ra-step-list2"><li>RPA 봇 개발</li><li>테스트 및 검증</li><li>시나리오 최적화</li></ul>
+        </div>
+        <div class="ra-step-conn"><div class="ra-step-conn-line"></div></div>
+        <div class="ra-step reveal">
+          <div class="ra-step-icon2"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div>
+          <div class="ra-step-label">04. 배포</div>
+          <ul class="ra-step-list2"><li>운영 환경 배포</li><li>봇 스케줄링 설정</li><li>권한 및 보안 적용</li></ul>
+        </div>
+        <div class="ra-step-conn"><div class="ra-step-conn-line"></div></div>
+        <div class="ra-step reveal">
+          <div class="ra-step-icon2"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+          <div class="ra-step-label">05. 운영</div>
+          <ul class="ra-step-list2"><li>봇 모니터링</li><li>예외 처리 지원</li><li>성능 관리</li></ul>
+        </div>
+        <div class="ra-step-conn"><div class="ra-step-conn-line"></div></div>
+        <div class="ra-step reveal">
+          <div class="ra-step-icon2"><svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></div>
+          <div class="ra-step-label">06. 고도화</div>
+          <ul class="ra-step-list2"><li>프로세스 개선</li><li>자동화 확대</li><li>지속적 최적화</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="ra-cta">
+    <div class="ra-cta-inner">
+      <div class="reveal">
+        <div class="ra-cta-text-title">브론토시스와 함께 RPA로 업무 혁신을 시작하세요.</div>
+        <div class="ra-cta-text-sub">브론토시스는 Automation Anywhere 기반의 RPA 구축 경험과 전문 컨설팅으로<br>고객의 비즈니스 프로세스를 최적화하고 디지털 혁신을 지원합니다.</div>
+      </div>
+      <div class="ra-cta-btns reveal">
+        <button class="ra-cta-btn-primary" onclick="goPage('inquiry')">문의하기</button>
+      </div>
+    </div>
   </div>
 </div>
-  <div class="page-wrap">
-  
-  <div class="placeholder-block"><strong>RPA Automation 상세 소개 영역</strong>주요 기능, 도입 효과, 적용 사례, 도입 절차 등이 포함됩니다.</div>
-  <div class="info-grid"><div class="info-card"><h4>주요 기능</h4><p>업무 프로세스 자동화, 스케줄링, 예외처리, 로그 관리</p></div><div class="info-card"><h4>도입 효과</h4><p>업무 처리 시간 최대 80% 단축, 오류율 대폭 감소</p></div><div class="info-card"><h4>적용 분야</h4><p>금융, 제조, 물류, 공공기관 등 전 산업군</p></div></div>
-</div></div>
 
 <!-- SOLUTION: FalconStor -->
 <div id="falcon" class="page">
