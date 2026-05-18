@@ -1155,7 +1155,7 @@
         <div class="footer-brand-num">사업자등록번호 289-86-03701</div>
         <div class="footer-brand-addr">서울특별시 강서구 공항대로 247 퀸즈파크나인 704호 (마곡동)</div>
         <div class="footer-brand-tel">T. 02-6080-0609</div>
-        <div class="footer-brand-mail">sales@brontosys.co.kr</div>
+        <!-- <div class="footer-brand-mail">jhbaek@brontosys.co.kr</div> -->
 
       </div>
       <div class="footer-col"><h4>Company</h4><a onclick="goPage('greeting')">회사소개</a><a onclick="goPage('clients')">주요 고객사</a><a onclick="goPage('orgchart')">조직도</a><a onclick="goPage('location')">오시는 길</a></div>
@@ -1725,15 +1725,15 @@
     .ra-steps-section{background:#fff;padding:80px 40px;}
     .ra-steps-inner{max-width:1240px;margin:0 auto;}
     .ra-steps-row{display:flex;align-items:flex-start;}
-    .ra-step{flex:1;padding:0 8px;text-align:center;}
+    .ra-step{flex:1;padding:0 8px;text-align:center;display:flex;flex-direction:column;align-items:center;}
     .ra-step-conn{flex:0 0 28px;padding-top:22px;}
     .ra-step-conn-line{border-top:2px dashed #d0d5dd;position:relative;width:100%;}
     .ra-step-conn-line::after{content:'';position:absolute;right:-5px;top:-6px;width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:8px solid #e8500a;}
     .ra-step-icon2{width:44px;height:44px;border-radius:50%;background:#fff3ee;border:2px solid #e8500a;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;}
     .ra-step-icon2 svg{width:20px;height:20px;stroke:#e8500a;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
     .ra-step-label{font-size:13px;font-weight:800;color:#e8500a;margin-bottom:8px;}
-    .ra-step-list2{list-style:none;padding:0;margin:0;text-align:left;}
-    .ra-step-list2 li{font-size:14px;color:#3d4f6a;line-height:1.9;padding-left:10px;position:relative;}
+    .ra-step-list2{list-style:none;padding:0;margin:0;text-align:left;display:inline-block;}
+    .ra-step-list2 li{font-size:14px;font-weight:600;color:#3d4f6a;line-height:1.9;padding-left:10px;position:relative;}
     .ra-step-list2 li::before{content:'·';position:absolute;left:0;color:#e8500a;font-weight:900;}
     @media(max-width:900px){.ra-steps-row{flex-direction:column;gap:16px;}.ra-step-conn{display:none;}.ra-step{padding:0;text-align:left;}}
     /* CTA */
