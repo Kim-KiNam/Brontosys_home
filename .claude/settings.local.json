@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(\\(Get-Content \"C:\\\\Users\\\\KIMKINAM\\\\Desktop\\\\Brontosys_home\\\\brontosys_homepage_6.html\" -Raw\\) -replace 'Falcon\\(?!Stor\\)', 'FalconStor' | Set-Content \"C:\\\\Users\\\\KIMKINAM\\\\Desktop\\\\Brontosys_home\\\\brontosys_homepage_6.html\" -Encoding utf8 -NoNewline)",
+      "PowerShell([System.Text.Encoding]::Default.CodePage)",
+      "PowerShell(vssadmin list shadows 2>&1)",
+      "WebSearch",
+      "WebFetch(domain:unsplash.com)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp"
+    ]
+  }
+}
