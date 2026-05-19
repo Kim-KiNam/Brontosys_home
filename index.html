@@ -1159,7 +1159,7 @@
 
       </div>
       <div class="footer-col"><h4>Company</h4><a onclick="goPage('greeting')">회사소개</a><a onclick="goPage('clients')">주요 고객사</a><a onclick="goPage('orgchart')">조직도</a><a onclick="goPage('location')">오시는 길</a></div>
-      <div class="footer-col"><h4>Solution</h4><a onclick="goPage('falcon')">FalconStor</a><a onclick="goPage('Veeam')">Veeam</a><a onclick="goPage('virtualization')">Virtualization Platform</a><a onclick="goPage('rpa')">RPA Automation</a></div>
+      <div class="footer-col"><h4>Solution</h4><a onclick="goPage('falcon')">FalconStor</a><a onclick="goPage('Veeam')">Veeam</a><a onclick="goPage('virtualization')">Virtualization Platform</a><a onclick="goPage('rpa')">RPA Automation</a><a onclick="goPage('fortinet')">Fortinet</a></div>
       <div class="footer-col"><h4>Service / Contact</h4><a onclick="goPage('sysimpl')">System Implementation</a><a onclick="goPage('notice')">공지사항</a><a onclick="goPage('inquiry')">문의하기</a>
         <img src="image/Falconstor_Korea_Partner.png" alt="FalconStor Official Authorized Partner" onclick="document.getElementById('partner-modal').style.display='flex'" style="display:block;width:100%;max-width:180px;margin-top:20px;border-radius:8px;cursor:pointer;opacity:.92;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.92'"/>
       </div>
@@ -2774,6 +2774,245 @@
   </div>
 </div>
 
+<!-- SOLUTION: Fortinet -->
+<div id="fortinet" class="page">
+  <div class="greeting-header">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="margin-bottom:14px;"><span class="page-breadcrumb">Solution › <span>Fortinet</span></span></div>
+      <h2 class="reveal">Fortinet 네트워크 보안 솔루션</h2>
+      <div class="greeting-header-sub reveal reveal-delay-1">세계 1위 네트워크 보안 기업 Fortinet의 공식 파트너로서, FortiGate 방화벽을 중심으로 통합 보안 인프라 구축을 지원합니다.</div>
+      <div class="greeting-header-line reveal reveal-delay-2"></div>
+    </div>
+  </div>
+  <style>
+    .ft-stitle{font-size:28px;font-weight:900;color:#0d2140;text-align:center;margin-bottom:12px;letter-spacing:-0.5px;}
+    .ft-ssub{font-size:15px;color:#8b9aaa;text-align:center;line-height:1.9;margin-bottom:48px;}
+    /* 제품 소개 */
+    .ft-intro{background:#fff;padding:80px 40px 64px;}
+    .ft-intro-inner{max-width:1100px;margin:0 auto;text-align:center;}
+    .ft-intro-logo{display:block;margin:0 auto 20px;max-height:56px;width:auto;}
+    /* 핵심 제품 */
+    .ft-func{background:#f7f8fa;padding:80px 40px;}
+    .ft-func-inner{max-width:1240px;margin:0 auto;}
+    .ft-func-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+    .ft-func-card{background:#fff;border-radius:10px;padding:32px 20px;border:1px solid #eef0f4;text-align:center;}
+    .ft-func-icon{width:52px;height:52px;border-radius:50%;border:2px solid #e8500a;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;background:#fff3ee;}
+    .ft-func-icon svg{width:24px;height:24px;stroke:#e8500a;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+    .ft-func-title{font-size:17px;font-weight:800;color:#0d2140;margin-bottom:10px;}
+    .ft-func-desc{font-size:14.5px;font-weight:600;color:#5a6a88;line-height:1.8;}
+    /* 도입 효과 */
+    .ft-effect{background:#fff;padding:80px 40px;}
+    .ft-effect-inner{max-width:1100px;margin:0 auto;}
+    .ft-effect-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .ft-effect-card{border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);}
+    .ft-effect-img{width:100%;height:180px;object-fit:cover;display:block;}
+    .ft-effect-body{padding:22px 20px;}
+    .ft-effect-title{font-size:17px;font-weight:800;color:#0d2140;margin-bottom:8px;}
+    .ft-effect-desc{font-size:14.5px;font-weight:600;color:#5a6a88;line-height:1.8;}
+    /* CTA */
+    .ft-cta{background:linear-gradient(135deg,#0d2140 0%,#1a3a6b 100%);padding:72px 40px;}
+    .ft-cta-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:32px;}
+    .ft-cta-title{font-size:27px;font-weight:900;color:#fff;margin-bottom:10px;letter-spacing:-0.3px;}
+    .ft-cta-sub{font-size:16px;color:#8b9aaa;line-height:1.9;}
+    .ft-cta-btn{display:inline-flex;align-items:center;gap:8px;background:#e8500a;color:#fff;font-size:16px;font-weight:700;padding:14px 32px;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s;}
+    .ft-cta-btn:hover{background:#cc4400;}
+    /* ── Security Fabric Diagram ── */
+    .ft-diagram{width:100%;max-width:1060px;margin:0 auto;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(13,33,64,.10);}
+    .ft-dg-internet{background:#0d2140;padding:18px 28px;display:flex;align-items:center;justify-content:center;gap:16px;text-align:center;}
+    .ft-dg-i-title{font-size:17px;font-weight:800;color:#fff;margin-bottom:7px;letter-spacing:.5px;}
+    .ft-dg-i-tags{display:flex;flex-wrap:wrap;gap:6px;}
+    .ft-dg-i-tags span{font-size:12.5px;background:rgba(255,255,255,.1);color:#a8bcd4;padding:2px 10px;border-radius:20px;}
+    .ft-dg-arrow{background:#f0f2f7;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6px 0;gap:6px;border-left:1px solid #e0e4ee;border-right:1px solid #e0e4ee;}
+    .ft-dg-arrow-line{width:2px;height:14px;background:#e8500a;}
+    .ft-dg-arrow-tri{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #e8500a;}
+    .ft-dg-arrow-label{font-size:12px;color:#a0aab8;font-weight:600;letter-spacing:.3px;}
+    .ft-dg-core{background:linear-gradient(135deg,#e8500a 0%,#c03800 100%);padding:22px 28px;text-align:center;display:flex;flex-direction:column;align-items:center;}
+    .ft-dg-core-top{display:flex;align-items:center;gap:16px;margin-bottom:14px;}
+    .ft-dg-core-badge{display:inline-block;background:rgba(255,255,255,.2);color:#fff;font-size:11px;font-weight:900;letter-spacing:2px;padding:2px 10px;border-radius:20px;margin-bottom:8px;}
+    .ft-dg-core-name{font-size:21px;font-weight:900;color:#fff;letter-spacing:-.3px;line-height:1.2;}
+    .ft-dg-core-sub{font-size:13.5px;color:rgba(255,255,255,.72);font-weight:600;margin-top:3px;}
+    .ft-dg-core-features{display:flex;flex-wrap:wrap;gap:8px;}
+    .ft-dg-core-features span{font-size:13px;background:rgba(255,255,255,.18);color:#fff;padding:4px 14px;border-radius:20px;font-weight:600;}
+    .ft-dg-comps{display:grid;grid-template-columns:repeat(5,1fr);border-left:1px solid #e0e4ee;border-right:1px solid #e0e4ee;background:#fff;}
+    .ft-dg-comp{padding:18px 10px 16px;text-align:center;border-right:1px solid #eef0f5;position:relative;}
+    .ft-dg-comp::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:2px;height:10px;background:#e8500a;}
+    .ft-dg-comp:last-child{border-right:none;}
+    .ft-dg-comp-icon{width:40px;height:40px;border:2px solid #e8500a;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:8px auto 10px;background:#fff3ee;}
+    .ft-dg-comp-icon svg{width:18px;height:18px;stroke:#e8500a;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+    .ft-dg-comp-name{font-size:13.5px;font-weight:600;color:#0d2140;margin-bottom:4px;}
+    .ft-dg-comp-desc{font-size:12px;font-weight:600;color:#8b9aaa;line-height:1.5;}
+    .ft-dg-internal{background:#f0f9f4;padding:16px 28px;display:flex;align-items:center;justify-content:center;gap:16px;text-align:center;border:1px solid #e0e4ee;border-top:none;}
+    .ft-dg-in-title{font-size:17px;font-weight:800;color:#1a5c30;margin-bottom:6px;}
+    .ft-dg-in-tags span{font-size:12.5px;color:#2d7d46;background:#c3e6cb;padding:2px 10px;border-radius:20px;margin-right:6px;}
+    .ft-dg-mgmt{background:#1a2a4a;padding:16px 28px;display:flex;align-items:center;gap:16px;justify-content:center;}
+    .ft-dg-mg-name{font-size:17px;font-weight:800;color:#fff;margin-bottom:3px;}
+    .ft-dg-mg-desc{font-size:13px;font-weight:600;color:#8b9aaa;}
+    @media(max-width:768px){.ft-dg-comps{grid-template-columns:repeat(3,1fr);}.ft-dg-comp:nth-child(3){border-right:none;}.ft-dg-comp:nth-child(n+4){border-top:1px solid #eef0f5;}}
+    @media(max-width:480px){.ft-dg-comps{grid-template-columns:repeat(2,1fr);}.ft-dg-comp:nth-child(even){border-right:none;}.ft-dg-comp:nth-child(n+3){border-top:1px solid #eef0f5;}}
+    @media(max-width:1100px){.ft-func-grid{grid-template-columns:repeat(2,1fr);}.ft-effect-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:600px){.ft-func-grid{grid-template-columns:1fr;}.ft-effect-grid{grid-template-columns:1fr;}}
+  </style>
+
+  <!-- 제품 소개 -->
+  <div class="ft-intro">
+    <div class="ft-intro-inner">
+      <img class="reveal" src="image/Fortinet_logo.png" alt="Automation Anywhere" style="display:block;margin:0 auto 20px;max-height:64px;width:auto;"/>
+      <p class="ft-ssub reveal reveal-delay-1">통합 보안 아키텍처 Security Fabric으로 네트워크 전반을 단일 플랫폼에서 관리하고 위협에 실시간 대응합니다.</p>
+      <div class="ft-diagram reveal reveal-delay-2">
+        <!-- Internet Layer -->
+        <div class="ft-dg-internet">
+          <div>
+            <div class="ft-dg-i-title">Internet / WAN — 외부 위협 구간</div>
+            <div class="ft-dg-i-tags"><span>사이버 위협</span><span>랜섬웨어</span><span>DDoS</span><span>APT 공격</span><span>피싱</span><span>Zero-Day</span></div>
+          </div>
+        </div>
+        <!-- Arrow -->
+        <div class="ft-dg-arrow">
+          <div class="ft-dg-arrow-line"></div>
+          <div class="ft-dg-arrow-tri"></div>
+          <div class="ft-dg-arrow-label">위협 탐지 및 차단</div>
+        </div>
+        <!-- FortiGate Core -->
+        <div class="ft-dg-core">
+          <div class="ft-dg-core-top">
+            <div>
+              <div class="ft-dg-core-badge">SECURITY FABRIC CORE</div>
+              <div class="ft-dg-core-name">FortiGate NGFW</div>
+              <div class="ft-dg-core-sub">네트워크 보안의 핵심 엔진 — 모든 트래픽을 검사하고 위협을 실시간 차단합니다</div>
+            </div>
+          </div>
+          <div class="ft-dg-core-features">
+            <span>차세대 방화벽</span><span>IPS / IDS</span><span>SSL 심층검사</span><span>애플리케이션 제어</span><span>SD-WAN</span><span>Zero Trust</span><span>VPN</span>
+          </div>
+        </div>
+        <!-- Component Cards -->
+        <div class="ft-dg-comps">
+          <div class="ft-dg-comp">
+            <div class="ft-dg-comp-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+            <div class="ft-dg-comp-name">FortiAnalyzer</div>
+            <div class="ft-dg-comp-desc">로그 수집<br>분석 · 리포팅</div>
+          </div>
+          <div class="ft-dg-comp">
+            <div class="ft-dg-comp-icon"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></div>
+            <div class="ft-dg-comp-name">FortiManager</div>
+            <div class="ft-dg-comp-desc">중앙 정책 관리<br>구성 자동화</div>
+          </div>
+          <div class="ft-dg-comp">
+            <div class="ft-dg-comp-icon"><svg viewBox="0 0 24 24"><path d="M1.05 12A11 11 0 0 1 23 12"/><path d="M5 12a7 7 0 0 1 14 0"/><path d="M9 12a3 3 0 0 1 6 0"/><line x1="12" y1="12" x2="12" y2="12"/></svg></div>
+            <div class="ft-dg-comp-name">FortiAP</div>
+            <div class="ft-dg-comp-desc">무선 네트워크<br>보안 관리</div>
+          </div>
+          <div class="ft-dg-comp">
+            <div class="ft-dg-comp-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+            <div class="ft-dg-comp-name">FortiSwitch</div>
+            <div class="ft-dg-comp-desc">네트워크 접근<br>제어 (NAC)</div>
+          </div>
+          <div class="ft-dg-comp">
+            <div class="ft-dg-comp-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div class="ft-dg-comp-name">FortiClient</div>
+            <div class="ft-dg-comp-desc">엔드포인트 보안<br>VPN · ZTNA</div>
+          </div>
+        </div>
+        <!-- Arrow -->
+        <div class="ft-dg-arrow" style="border-left:1px solid #e0e4ee;border-right:1px solid #e0e4ee;">
+          <div class="ft-dg-arrow-line"></div>
+          <div class="ft-dg-arrow-tri"></div>
+          <div class="ft-dg-arrow-label">보호된 네트워크</div>
+        </div>
+        <!-- Internal Network -->
+        <div class="ft-dg-internal">
+          <div>
+            <div class="ft-dg-in-title">내부 네트워크 — 보호 구간</div>
+            <div class="ft-dg-in-tags"><span>서버 · 데이터베이스</span><span>PC · 노트북</span><span>모바일</span><span>IoT 기기</span></div>
+          </div>
+        </div>
+        <!-- FortiManager Management Bar -->
+        <div class="ft-dg-mgmt">
+          <div>
+            <div class="ft-dg-mg-name">FortiManager — 통합 관리 플랫폼</div>
+            <div class="ft-dg-mg-desc">멀티 FortiGate 중앙 정책 관리 · 구성 자동화 · 펌웨어 배포 · 감사 로그</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 핵심 제품 -->
+  <div class="ft-func">
+    <div class="ft-func-inner">
+      <h3 class="ft-stitle reveal">핵심 제품 라인업</h3>
+      <p class="ft-ssub reveal reveal-delay-1">FortiGate를 중심으로 네트워크, 엔드포인트, 관리까지 완벽한 보안 생태계를 제공합니다.</p>
+      <div class="ft-func-grid">
+        <div class="ft-func-card reveal">
+          <div class="ft-func-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+          <div class="ft-func-title">FortiGate</div>
+          <div class="ft-func-desc">차세대 방화벽(NGFW). IPS, SSL 검사, 애플리케이션 제어를 단일 장비에서 처리합니다.</div>
+        </div>
+        <div class="ft-func-card reveal reveal-delay-1">
+          <div class="ft-func-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="ft-func-title">FortiAnalyzer</div>
+          <div class="ft-func-desc">중앙 집중식 로그 수집 및 분석. 보안 이벤트를 실시간으로 모니터링하고 리포팅합니다.</div>
+        </div>
+        <div class="ft-func-card reveal reveal-delay-2">
+          <div class="ft-func-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+          <div class="ft-func-title">FortiManager</div>
+          <div class="ft-func-desc">다중 FortiGate 장비를 단일 콘솔에서 정책 관리 및 구성 자동화로 운영 효율을 높입니다.</div>
+        </div>
+        <div class="ft-func-card reveal reveal-delay-3">
+          <div class="ft-func-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <div class="ft-func-title">FortiClient</div>
+          <div class="ft-func-desc">엔드포인트 보안 및 VPN 클라이언트. 원격근무 환경에서도 안전한 접속을 보장합니다.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 도입 효과 -->
+  <div class="ft-effect">
+    <div class="ft-effect-inner">
+      <h3 class="ft-stitle reveal">도입 효과</h3>
+      <p class="ft-ssub reveal reveal-delay-1">Fortinet 솔루션 도입으로 보안 수준과 운영 효율을 동시에 높이세요.</p>
+      <div class="ft-effect-grid">
+        <div class="ft-effect-card reveal">
+          <img class="ft-effect-img" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="통합 위협 차단"/>
+          <div class="ft-effect-body">
+            <div class="ft-effect-title">통합 위협 차단</div>
+            <div class="ft-effect-desc">방화벽, IPS, 안티바이러스를 통합하여 알려진·알려지지 않은 위협을 실시간으로 탐지·차단합니다.</div>
+          </div>
+        </div>
+        <div class="ft-effect-card reveal reveal-delay-1">
+          <img class="ft-effect-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="중앙 통합 관리"/>
+          <div class="ft-effect-body">
+            <div class="ft-effect-title">중앙 통합 관리</div>
+            <div class="ft-effect-desc">Security Fabric으로 전체 보안 인프라를 단일 뷰에서 관리하여 운영 복잡성과 비용을 절감합니다.</div>
+          </div>
+        </div>
+        <div class="ft-effect-card reveal reveal-delay-2">
+          <img class="ft-effect-img" src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80" alt="고성능 처리"/>
+          <div class="ft-effect-body">
+            <div class="ft-effect-title">고성능 처리</div>
+            <div class="ft-effect-desc">자체 개발 ASIC 칩 기반으로 보안 기능 활성화 시에도 네트워크 성능 저하 없이 고속 처리합니다.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="ft-cta">
+    <div class="ft-cta-inner">
+      <div>
+        <div class="ft-cta-title reveal">Fortinet 보안 솔루션을 도입해보세요!</div>
+        <div class="ft-cta-sub reveal">브론토시스는 Fortinet 공식 파트너로서 최적의 보안 아키텍처 설계부터 구축, 유지보수까지 전 과정을 지원합니다.</div>
+      </div>
+      <button class="ft-cta-btn reveal" onclick="goPage('inquiry')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        도입 문의
+      </button>
+    </div>
+  </div>
+</div>
+
 <!-- SERVICE: System Implementation -->
 <div id="sysimpl" class="page">
 <style>
@@ -3033,8 +3272,9 @@
 </div>
 
 <script>
-  const pages = ['home','greeting','clients','orgchart','location','rpa','falcon','Veeam','virtualization','sysimpl','notice','inquiry'];
-  const navMap = { greeting:'company', clients:'company', orgchart:'company', location:'company', rpa:'solution', falcon:'solution', Veeam:'solution', virtualization:'solution', sysimpl:'service', notice:'contact', inquiry:'contact' };
+  const pages = ['home','greeting','clients','orgchart','location','rpa','falcon','Veeam','virtualization','fortinet','sysimpl','notice','inquiry'];
+  const navMap = { greeting:'company', clients:'company', orgchart:'company', location:'company', rpa:'solution', falcon:'solution', Veeam:'solution', virtualization:'solution', fortinet:'solution', sysimpl:'service', notice:'contact', inquiry:'contact' };
+
 
   function toggleMobileMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');

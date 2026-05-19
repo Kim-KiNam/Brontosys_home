@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Logo Preview - Method 1 (CSS Filter)</title>
+<style>
+  body { background:#fff; display:flex; flex-direction:column; align-items:center; gap:40px; padding:60px; font-family:sans-serif; }
+  h3 { color:#333; margin-bottom:0; }
+  .label { font-size:13px; color:#888; margin-top:6px; }
+  .original img { height:80px; }
+  .method1 img {
+    height:80px;
+    filter: brightness(0) saturate(100%) invert(39%) sepia(97%) saturate(572%) hue-rotate(346deg) brightness(103%);
+  }
+</style>
+</head>
+<body>
+  <div class="original">
+    <h3>원본</h3>
+    <img src="../logo_output/logo_original.png"/>
+    <div class="label">현재 파란색 로고</div>
+  </div>
+  <div class="method1">
+    <h3>방법 1 — CSS Filter (#e8500a)</h3>
+    <img src="../logo_output/logo_original.png"/>
+    <div class="label">전체 오렌지 단색 (CSS filter)</div>
+  </div>
+</body>
+</html>
