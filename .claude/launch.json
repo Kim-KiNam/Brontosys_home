@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "nav-preview",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "cd /d C:\\Users\\KIMKINAM\\Desktop\\Brontosys_home && python -m http.server 7788"],
+      "port": 7788
+    }
+  ]
+}
