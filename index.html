@@ -1189,10 +1189,6 @@
     </div>
   </div>
 
-  <!-- 파트너 인증서 팝업 -->
-  <div id="partner-modal" onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;">
-    <img src="image/Falconstor_Korea_Partner.png" alt="FalconStor Official Authorized Partner" onclick="event.stopPropagation()" style="max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,.6);cursor:default;"/>
-  </div>
 
   <!-- 슬라이더 & 솔루션 탭 JS -->
   <script>
@@ -3424,5 +3420,10 @@
     renderPage(id);
   });
 </script>
+
+<!-- 파트너 인증서 팝업 (모든 페이지 공통) -->
+<div id="partner-modal" onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;">
+  <img src="image/Falconstor_Korea_Partner.png" alt="FalconStor Official Authorized Partner" onclick="event.stopPropagation()" style="max-width:45vw;max-height:45vh;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,.6);cursor:default;"/>
+</div>
 </body>
 </html>
