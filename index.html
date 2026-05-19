@@ -507,6 +507,7 @@
           <a onclick="goPage('Veeam')">Veeam <span class="d-arr">›</span></a>
           <a onclick="goPage('virtualization')">Virtualization Platform <span class="d-arr">›</span></a>
           <a onclick="goPage('rpa')">RPA Automation <span class="d-arr">›</span></a>
+          <a onclick="goPage('fortinet')">Fortinet <span class="d-arr">›</span></a>
         </div>
       </div>
       <div class="nav-item" id="nav-service" onclick="goPage('sysimpl')">Service</div>
@@ -535,7 +536,7 @@
   <div class="mobile-nav-group">
     <div class="mobile-nav-label" onclick="toggleMobileSub('sub-solution',this)">Solution <span class="arrow">›</span></div>
     <div class="mobile-sub" id="sub-solution">
-      <a onclick="goPage('falcon')">FalconStor</a><a onclick="goPage('Veeam')">Veeam</a><a onclick="goPage('virtualization')">Virtualization Platform</a><a onclick="goPage('rpa')">RPA Automation</a>
+      <a onclick="goPage('falcon')">FalconStor</a><a onclick="goPage('Veeam')">Veeam</a><a onclick="goPage('virtualization')">Virtualization Platform</a><a onclick="goPage('rpa')">RPA Automation</a><a onclick="goPage('fortinet')">Fortinet</a>
     </div>
   </div>
   <div class="mobile-nav-group">
@@ -1002,7 +1003,7 @@
       <div class="nh-sol-left">
         <div class="nh-sol-tag">Our Solutions</div>
         <div class="nh-sol-heading">Business<br>Innovation</div>
-        <div class="nh-sol-sub">브론토시스의 4가지 핵심 솔루션</div>
+        <div class="nh-sol-sub">브론토시스의 5가지 핵심 솔루션</div>
         <div class="nh-sol-list">
           <div class="nh-sol-item active" onclick="selectSol(0, this)">
             <span class="nh-sol-num">01</span>
@@ -1019,6 +1020,10 @@
           <div class="nh-sol-item" onclick="selectSol(3, this)">
             <span class="nh-sol-num">04</span>
             <span class="nh-sol-name">RPA Automation</span>
+          </div>
+          <div class="nh-sol-item" onclick="selectSol(4, this)">
+            <span class="nh-sol-num">05</span>
+            <span class="nh-sol-name">Fortinet</span>
           </div>
         </div>
       </div>
@@ -1073,6 +1078,18 @@
               <div class="nh-sol-card-en">Robotic Process Automation</div>
               <div class="nh-sol-card-desc">반복적인 업무 프로세스를 자동화하여 생산성과 정확성을 극대화합니다.<br>기업의 다양한 업무 프로세스를 분석하여 최적의 자동화 환경을 구축합니다.</div>
               <button class="nh-sol-card-btn" onclick="goPage('rpa')">자세히 보기 →</button>
+            </div>
+          </div>
+        </div>
+        <div class="nh-sol-panel">
+          <div class="nh-sol-card" style="background:linear-gradient(135deg,#0d2140 0%,#1a3a6b 60%,#e8500a 100%);">
+            <div class="nh-sol-card-overlay"></div>
+            <div class="nh-sol-card-content">
+              <div class="nh-sol-card-tags"><span class="nh-sol-card-tag">네트워크 보안</span><span class="nh-sol-card-tag">방화벽</span></div>
+              <div class="nh-sol-card-title">Fortinet</div>
+              <div class="nh-sol-card-en">Network Security Solution</div>
+              <div class="nh-sol-card-desc">세계 1위 네트워크 보안 기업 Fortinet의 공식 파트너로서, FortiGate 방화벽 중심의 통합 보안 인프라를 구축합니다.<br>Security Fabric 아키텍처로 네트워크 전반을 단일 플랫폼에서 관리합니다.</div>
+              <button class="nh-sol-card-btn" onclick="goPage('fortinet')">자세히 보기 →</button>
             </div>
           </div>
         </div>
